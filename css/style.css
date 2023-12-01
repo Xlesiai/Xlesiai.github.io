@@ -42,17 +42,23 @@ section {
     background-color: var(--forground-color);
 }
 
-.projects {
+.projects, #contacts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    
+}
+.projects a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.project {
+.project, .contact, .skill {
     border: 1px solid var(--primary-varient);
     padding: 15px;
     border-radius: 5px;
 }
+
 
 .project h3 {
     margin-top: 0;
