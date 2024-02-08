@@ -1,6 +1,7 @@
 /*Description Section */
 .description {
   z-index: 1;
+  background-color: aqua;
 }
 .description img {
   width: 20%;
@@ -16,16 +17,19 @@
 /*Skills Section */
 .skills {
   z-index: 2;
+  background-color: greenyellow;
 }
 
 /*Resume Section */
 .resume {
   z-index: 3;
+  background-color: yellow;
 }
 
 /*Contact Section */
 .contact {
   z-index: 4;
+  background-color: red;
 }
 
 /* General Section */
