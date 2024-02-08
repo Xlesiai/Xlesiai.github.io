@@ -1,0 +1,34 @@
+/*Description Section */
+.description {
+  z-index: 1;
+}
+.description img {
+  width: 20%;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1em;
+  float: left;
+}
+.description p {
+  line-height: 1.3em;
+}
+
+/*Skills Section */
+.skills {
+  z-index: 2;
+}
+
+/*Resume Section */
+.resume {
+  z-index: 3;
+}
+
+/*Contact Section */
+.contact {
+  z-index: 4;
+}
+
+/* General Section */
+section.fixed {
+  /* position: fixed; */
+}

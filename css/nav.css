@@ -1,0 +1,46 @@
+/* Positioning */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  z-index: 999;
+}
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  /* margin: 0 40px; */
+  /* visibility: hidden; */
+}
+/* not needed? */
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color);
+  z-index: 999;
+}
+
+/* Interations */
+.navbar a:hover {
+  background-color: var(--primary);
+  color: var(--background-color);
+}
+#current a {
+  background-color: var(--primary-varient);
+  color: var(--background-color);
+}
+#current a:hover {
+  background-color: var(--primary);
+  color: var(--background-color);
+}
+main {
+  padding-top: 6em;
+}
