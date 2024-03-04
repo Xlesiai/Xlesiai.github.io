@@ -1,38 +1,35 @@
-/*Description Section */
-.description {
-  z-index: 1;
-  background-color: aqua;
+section {
+  position: relative;
+  min-height: 1000px;
 }
-.description img {
-  width: 20%;
-  min-width: 300px;
-  max-width: 500px;
-  padding: 1em;
-  float: left;
+main {
+  width: 100%;
 }
-.description p {
-  line-height: 1.3em;
+div.container {
+  overflow: hidden;
 }
-
-/*Skills Section */
-.skills {
-  z-index: 2;
-  background-color: greenyellow;
+section#aboutme {
+  /* top: 300; */
+  background-color: rgba(255, 0, 0, 0.249);
 }
-
-/*Resume Section */
-.resume {
-  z-index: 3;
-  background-color: yellow;
+section#skills {
+  /* top: 300; */
+  background-color: rgba(255, 242, 0, 0.249);
 }
-
-/*Contact Section */
-.contact {
-  z-index: 4;
-  background-color: red;
+section#resume {
+  /* top: 300; */
+  background-color: rgba(4, 255, 0, 0.249);
+}
+section#contacts {
+  /* top: 300; */
+  background-color: rgba(0, 255, 255, 0.249);
+}
+.sticky {
+  position: sticky;
+  top: 0;
 }
 
-/* General Section */
-section.fixed {
-  /* position: fixed; */
+p.lorem {
+  inline-size: 100%;
+  overflow-wrap: break-word;
 }
