@@ -1,5 +1,5 @@
-section {
-  height: 0;
+.option {
+  height: 50px;
 }
 .checkbox {
   display: flex;

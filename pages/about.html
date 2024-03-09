@@ -1,96 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Sticky Sections GSAP Scrolltrigger</title>
+  <link rel="stylesheet" href="../css/test.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+</head>
 
-    <!-- Style Sheets -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/nav.css" />
-    <link rel="stylesheet" href="../css/about.css" />
-
-    <title>About Me!</title>
-  </head>
-  <body>
-    <!-- Nav Bar -->
-    <nav class="navbar fixed">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li id="current"><a href="../pages/about.html">About Me</a></li>
-        <li><a href="../pages/projects.html">Projects</a></li>
-        <li><a href="../pages/about.html#skills">Skills</a></li>
-        <li><a href="../pages/about.html#resume">Resume</a></li>
-        <li><a href="../pages/about.html#contacts">Contacts</a></li>
-      </ul>
-      <p id="test">Scroll</p>
-    </nav>
-
-    <main>
-      <div id="container">
-        <!-- About Me Section -->
-        <section id="aboutme" parallax-section>
-          <h2>About Me Section</h2>
-          <p class="lorem">
-            <span
-              >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
-              doloribus, nulla amet accusamus nemo, inventore id sapiente
-              repudiandae eveniet repellat laboriosam aliquam ut autem, earum
-              voluptas natus. Nostrum, alias nam.</span
-            ><span
-              >Deleniti quis, dolore quibusdam atque voluptates, beatae iusto
-              sapiente possimus corporis libero repellat voluptas commodi nihil
-              aspernatur delectus architecto veritatis eligendi nostrum sed
-              porro minus doloribus accusamus numquam natus. Illum!</span
-            ><span
-              >Accusamus molestias veniam earum aut voluptates nemo tenetur quia
-              illum facilis ratione neque odio, sequi, maiores voluptatem.
-              Voluptatibus odio corrupti similique, quam vel possimus, quidem
-              error, numquam quaerat officia consequatur!</span
-            ><span
-              >Iusto excepturi sit nihil? Voluptatibus repudiandae, eos qui
-              ipsam nostrum nihil veniam id unde eum, corrupti totam facilis
-              inventore pariatur quibusdam dolor architecto. Consequatur
-              pariatur magnam dolorum, at nihil molestias.</span
-            ><span
-              >Molestias mollitia quod minus. Consectetur fugit commodi
-              reiciendis ut quam, inventore aperiam doloribus consequuntur
-              recusandae magnam blanditiis quo sapiente velit modi, maiores
-              labore nam quisquam sunt laudantium molestiae laborum
-              cumque.</span
-            ><span
-              >Aliquam vitae quasi voluptas explicabo ipsa corporis unde?
-              Voluptatum sunt qui, quae perferendis non eum iure aliquam
-              perspiciatis, vero optio fugit et, architecto aliquid magni
-              nesciunt quidem delectus. In, tempora!</span
-            >
-          </p>
-        </section>
-        <!-- Skills Section -->
-        <section id="skills" parallax-section>
-          <h2>Skills Section</h2>
-        </section>
-
-        <!-- Resume Section -->
-        <section id="resume" parallax-section>
-          <h2>Resume Section</h2>
-        </section>
-
-        <!-- Contacts Section -->
-        <section id="contacts" parallax-section>
-          <h2>Contacts Section</h2>
-        </section>
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/about.html">About Me</a></li>
+      <li id="current"><a href="../pages/projects.html">Projects</a></li>
+      <li><a href="../pages/about.html#skills">Skills</a></li>
+      <li><a href="../pages/about.html#resume">Resume</a></li>
+      <li><a href="../pages/about.html#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+  <main>
+    <!-- About Me Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="background">
+          <h2>About Me</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae cupiditate ab quos, laborum sed voluptatum a porro veniam aliquam minus natus enim culpa placeat blanditiis voluptatem! Fugit, aperiam quia!
+            Maxime, eum sapiente corporis neque quia pariatur et dolore distinctio, reprehenderit est unde dolorem reiciendis magnam quis, atque sint ea ipsum vel laboriosam earum. Soluta excepturi id odit quibusdam debitis!
+            Possimus praesentium quos, veritatis quia ex laboriosam porro dolores ad, nisi aut maxime laudantium in reiciendis doloremque perspiciatis, placeat omnis suscipit. Doloribus, unde temporibus adipisci ipsam laborum corporis dolorem cumque.
+            Magni, ad, odit mollitia blanditiis, placeat dolorum non aut amet rerum pariatur laudantium fuga quia delectus repellendus dignissimos fugiat nulla ipsum! Aspernatur placeat ea blanditiis ducimus ab a dignissimos commodi.
+            Aliquam sequi ipsam molestiae eveniet. Molestias culpa, odio nihil error, vero, perferendis magnam placeat iusto odit assumenda vel blanditiis dignissimos eaque voluptates voluptatem soluta a sequi eius accusamus non quod.
+            Suscipit voluptatibus at non fugiat ab laboriosam itaque aliquid delectus nisi voluptatum voluptas, quisquam vel officia corrupti corporis sunt magnam nam ipsam quas exercitationem veniam repudiandae fuga. Et, distinctio error.
+            Officiis ullam consequatur minus quos dignissimos pariatur accusantium itaque doloremque eveniet error commodi facere, suscipit corporis quasi, a numquam eius eligendi placeat ex? Sunt inventore nobis nesciunt itaque repudiandae nostrum.
+            Nulla vel debitis atque id quae enim alias tempora cumque saepe, cum quaerat voluptatum fuga illo ut? Facere natus officiis sapiente. Sunt blanditiis veniam beatae ratione unde. Quibusdam, ullam voluptatibus.
+            Illo totam quod tempora dignissimos ab ex, repudiandae explicabo! Rerum, sequi deserunt illum provident, quam tenetur minus velit possimus cumque suscipit hic repellendus commodi! Accusamus ratione dolorum deserunt error quasi?
+            Labore esse laudantium odit libero obcaecati dolore eos tempora autem tempore, debitis laborum ipsum, exercitationem, voluptatibus in expedita! Laudantium dolore laborum rem quasi dolor quibusdam ducimus aspernatur iusto libero. Ullam.
+        </p>
+        </div>
       </div>
-    </main>
+    </section>
 
-    <!-- Parallax Scroll -->
-    <script src="../js/parallax-scroll.js"></script>
-  </body>
+    <!-- Skills Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="background">
+            <h2>Skills</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae cupiditate ab quos, laborum sed voluptatum a porro veniam aliquam minus natus enim culpa placeat blanditiis voluptatem! Fugit, aperiam quia!
+              Maxime, eum sapiente corporis neque quia pariatur et dolore distinctio, reprehenderit est unde dolorem reiciendis magnam quis, atque sint ea ipsum vel laboriosam earum. Soluta excepturi id odit quibusdam debitis!
+              Possimus praesentium quos, veritatis quia ex laboriosam porro dolores ad, nisi aut maxime laudantium in reiciendis doloremque perspiciatis, placeat omnis suscipit. Doloribus, unde temporibus adipisci ipsam laborum corporis dolorem cumque.
+              Magni, ad, odit mollitia blanditiis, placeat dolorum non aut amet rerum pariatur laudantium fuga quia delectus repellendus dignissimos fugiat nulla ipsum! Aspernatur placeat ea blanditiis ducimus ab a dignissimos commodi.
+              Aliquam sequi ipsam molestiae eveniet. Molestias culpa, odio nihil error, vero, perferendis magnam placeat iusto odit assumenda vel blanditiis dignissimos eaque voluptates voluptatem soluta a sequi eius accusamus non quod.
+              Suscipit voluptatibus at non fugiat ab laboriosam itaque aliquid delectus nisi voluptatum voluptas, quisquam vel officia corrupti corporis sunt magnam nam ipsam quas exercitationem veniam repudiandae fuga. Et, distinctio error.
+              Officiis ullam consequatur minus quos dignissimos pariatur accusantium itaque doloremque eveniet error commodi facere, suscipit corporis quasi, a numquam eius eligendi placeat ex? Sunt inventore nobis nesciunt itaque repudiandae nostrum.
+              Nulla vel debitis atque id quae enim alias tempora cumque saepe, cum quaerat voluptatum fuga illo ut? Facere natus officiis sapiente. Sunt blanditiis veniam beatae ratione unde. Quibusdam, ullam voluptatibus.
+              Illo totam quod tempora dignissimos ab ex, repudiandae explicabo! Rerum, sequi deserunt illum provident, quam tenetur minus velit possimus cumque suscipit hic repellendus commodi! Accusamus ratione dolorum deserunt error quasi?
+              Labore esse laudantium odit libero obcaecati dolore eos tempora autem tempore, debitis laborum ipsum, exercitationem, voluptatibus in expedita! Laudantium dolore laborum rem quasi dolor quibusdam ducimus aspernatur iusto libero. Ullam.
+          </p>
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Resume Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="background">
+            <h2>Resume</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae cupiditate ab quos, laborum sed voluptatum a porro veniam aliquam minus natus enim culpa placeat blanditiis voluptatem! Fugit, aperiam quia!
+              Maxime, eum sapiente corporis neque quia pariatur et dolore distinctio, reprehenderit est unde dolorem reiciendis magnam quis, atque sint ea ipsum vel laboriosam earum. Soluta excepturi id odit quibusdam debitis!
+              Possimus praesentium quos, veritatis quia ex laboriosam porro dolores ad, nisi aut maxime laudantium in reiciendis doloremque perspiciatis, placeat omnis suscipit. Doloribus, unde temporibus adipisci ipsam laborum corporis dolorem cumque.
+              Magni, ad, odit mollitia blanditiis, placeat dolorum non aut amet rerum pariatur laudantium fuga quia delectus repellendus dignissimos fugiat nulla ipsum! Aspernatur placeat ea blanditiis ducimus ab a dignissimos commodi.
+              Aliquam sequi ipsam molestiae eveniet. Molestias culpa, odio nihil error, vero, perferendis magnam placeat iusto odit assumenda vel blanditiis dignissimos eaque voluptates voluptatem soluta a sequi eius accusamus non quod.
+              Suscipit voluptatibus at non fugiat ab laboriosam itaque aliquid delectus nisi voluptatum voluptas, quisquam vel officia corrupti corporis sunt magnam nam ipsam quas exercitationem veniam repudiandae fuga. Et, distinctio error.
+              Officiis ullam consequatur minus quos dignissimos pariatur accusantium itaque doloremque eveniet error commodi facere, suscipit corporis quasi, a numquam eius eligendi placeat ex? Sunt inventore nobis nesciunt itaque repudiandae nostrum.
+              Nulla vel debitis atque id quae enim alias tempora cumque saepe, cum quaerat voluptatum fuga illo ut? Facere natus officiis sapiente. Sunt blanditiis veniam beatae ratione unde. Quibusdam, ullam voluptatibus.
+              Illo totam quod tempora dignissimos ab ex, repudiandae explicabo! Rerum, sequi deserunt illum provident, quam tenetur minus velit possimus cumque suscipit hic repellendus commodi! Accusamus ratione dolorum deserunt error quasi?
+              Labore esse laudantium odit libero obcaecati dolore eos tempora autem tempore, debitis laborum ipsum, exercitationem, voluptatibus in expedita! Laudantium dolore laborum rem quasi dolor quibusdam ducimus aspernatur iusto libero. Ullam.
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="background">
+            <h2>Contacts</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae cupiditate ab quos, laborum sed voluptatum a porro veniam aliquam minus natus enim culpa placeat blanditiis voluptatem! Fugit, aperiam quia!
+              Maxime, eum sapiente corporis neque quia pariatur et dolore distinctio, reprehenderit est unde dolorem reiciendis magnam quis, atque sint ea ipsum vel laboriosam earum. Soluta excepturi id odit quibusdam debitis!
+              Possimus praesentium quos, veritatis quia ex laboriosam porro dolores ad, nisi aut maxime laudantium in reiciendis doloremque perspiciatis, placeat omnis suscipit. Doloribus, unde temporibus adipisci ipsam laborum corporis dolorem cumque.
+              Magni, ad, odit mollitia blanditiis, placeat dolorum non aut amet rerum pariatur laudantium fuga quia delectus repellendus dignissimos fugiat nulla ipsum! Aspernatur placeat ea blanditiis ducimus ab a dignissimos commodi.
+              Aliquam sequi ipsam molestiae eveniet. Molestias culpa, odio nihil error, vero, perferendis magnam placeat iusto odit assumenda vel blanditiis dignissimos eaque voluptates voluptatem soluta a sequi eius accusamus non quod.
+              Suscipit voluptatibus at non fugiat ab laboriosam itaque aliquid delectus nisi voluptatum voluptas, quisquam vel officia corrupti corporis sunt magnam nam ipsam quas exercitationem veniam repudiandae fuga. Et, distinctio error.
+              Officiis ullam consequatur minus quos dignissimos pariatur accusantium itaque doloremque eveniet error commodi facere, suscipit corporis quasi, a numquam eius eligendi placeat ex? Sunt inventore nobis nesciunt itaque repudiandae nostrum.
+              Nulla vel debitis atque id quae enim alias tempora cumque saepe, cum quaerat voluptatum fuga illo ut? Facere natus officiis sapiente. Sunt blanditiis veniam beatae ratione unde. Quibusdam, ullam voluptatibus.
+              Illo totam quod tempora dignissimos ab ex, repudiandae explicabo! Rerum, sequi deserunt illum provident, quam tenetur minus velit possimus cumque suscipit hic repellendus commodi! Accusamus ratione dolorum deserunt error quasi?
+              Labore esse laudantium odit libero obcaecati dolore eos tempora autem tempore, debitis laborum ipsum, exercitationem, voluptatibus in expedita! Laudantium dolore laborum rem quasi dolor quibusdam ducimus aspernatur iusto libero. Ullam.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">Sub-nav</div>
+        <div class="col-6">SoMe Links</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<!-- <script src="../js/test.js"></script> -->
+
 </html>
