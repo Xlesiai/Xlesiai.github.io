@@ -1,167 +1,60 @@
-* {
-  box-sizing: border-box;
-}
 :root {
-  --background-color: #333;
-  --background-color-varient: #949494;
-  --forground-color: #fff;
-
-  --primary: #fff;
-  --primary-varient: #b4c1d8;
-  --secondary: #333;
-  --secondary-varient: #333;
-
-  --primary-font: "Open Sans" sans-serif;
+  --background-color: #272626;
+  --text-color: #d5d5d5;
+  --link-color: hsl(211, 100%, 76%);
+  --link-hover-color: hsl(220, 98%, 64%);
+  --heading-color: #ffffff;
 }
-
-/* CSS RESET */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: var(--primary-font);
-  vertical-align: baseline;
-  scroll-behavior: smooth;
-}
-html,
-body,
-main {
-  height: 100%;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
+main,
 body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-section {
-  height: 100%;
-  background-color: transparent;
-  position: relative;
-}
-
-body {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
   background-color: var(--background-color);
+  color: var(--text-color);
 }
-a,
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--primary);
+  color: var(--heading-color);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+a,
+p {
+  font-size: 2rem;
+}
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
 }

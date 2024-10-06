@@ -1,83 +1,76 @@
-<!-- Notes:
-  - Projects on hover animate demo reel
-    - parallax
-  - Centered header
-- http://www.rleonardi.com/interactive-resume/
-
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Michael's Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="css\intro.css" />
+    <link rel="stylesheet" href="css\projects.css" />
+    
+    <!-- JS -->
+    <script src="js\projects.js" defer></script>
+    <script src="js\section.js" defer></script>
+    <script src="js\typing.js" defer></script>
+</head>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- My Stylesheets -->
-    <link rel="stylesheet" href="../css/nav.css" />
-    <link rel="stylesheet" href="../css/index.css" />
-
-    <title>Michael Cardoso</title>
-  </head>
   <body>
-    <!-- Nav Bar -->
-    <nav class="navbar fixed">
-      <ul>
-        <li id="current"><a href="../index.html">Home</a></li>
-        <li><a href="../pages/about.html">About Me</a></li>
-        <li><a href="../pages/projects.html">Projects</a></li>
-        <li><a href="../pages/about.html#skills">Skills</a></li>
-        <li><a href="../pages/about.html#resume">Resume</a></li>
-        <li><a href="../pages/about.html#contacts">Contacts</a></li>
-      </ul>
-    </nav>
-
-    <!-- Main -->
-    <main>
-      <!-- Demo Reel -->
-      <section id="demo-reel">
-        <div class="parallax">
-          <video src="../img/spinning-demo.mp4" autoplay loop>
-            Video is not supported on your browser
-          </video>
-        </div>
-        <a href="../pages/about.html">
-          <button>Find out more!</button>
-        </a>
+    <div class="container">
+      <!-- Intro -->
+      <!-- 
+            - Who I Am
+            - Resume
+        -->
+      <section class="intro">
+        <h1 class="typing">Michael Cardoso</h1>
+        <p class="typing">A passionate software developer.</p>
+        <p class="typing">Proven ability to develop solutions in both academic and project-based environments. Seeking opportunities to apply my technical skills and collaborative approach to real-world challenges in software development.
+        </p>
       </section>
-
+      <!-- About Me -->
+      <!-- 
+            - About Me
+            - Work Experience
+            - My Skills
+        -->
+      <section class="about-me">
+        <h2>About Me</h2>
+        <p>Hello, I'm Michael.</p>
+        <p>
+            I am a recent Prairie View A&M University graduate, 
+            motivated to show my skills and abilities with a strong 
+            background in Python, machine learning, and 
+            cybersecurity research.
+        </p>
+      </section>
       <!-- Projects -->
-      <section id="projects">
-        <a href="../pages/projects.html">Projects</a>
-        <ul>
-          <li>
-            <div class="project">
-              <img src="../img/temp.jpg" alt="" />
-              <h6>name</h6>
-            </div>
-          </li>
-          <li>
-            <div class="project">
-              <img src="../img/temp.jpg" alt="" />
-              <h6>name</h6>
-            </div>
-          </li>
-          <li>
-            <div class="project">
-              <img src="../img/temp.jpg" alt="" />
-              <h6>name</h6>
-            </div>
-          </li>
-        </ul>
+      <!--
+            - CS Projects
+            - Game Dev Projects
+        -->
+      <section class="projects">
+        <h2>Projects</h2>
+        <div id="projects-container"></div>
       </section>
-      <footer>&copy; Michael Cardoso 1999</footer>
-    </main>
+      <!-- Contacts/Links -->
+      <!--
+            - Email
+            - LinkedIn
+            - GitHub
+            - Youtube
+        -->
+      <section class="contacts">
+        <h2>Contacts</h2>
+        <ul>
+          <li><a href="mailto:mikecar26@gmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/michael-cardoso/">LinkedIn</a></li>
+          <li><a href="https://github.com/xlesiai">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@mcardoso">YouTube</a></li>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p>Michael's Portfolio</p>
+    </footer>
   </body>
 </html>
