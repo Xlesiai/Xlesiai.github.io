@@ -1,60 +1,81 @@
 :root {
-  --background-color: #272626;
-  --text-color: #d5d5d5;
-  --link-color: hsl(211, 100%, 76%);
-  --link-hover-color: hsl(220, 98%, 64%);
-  --heading-color: #ffffff;
+  --background-color: #0a192f;
+  --primary-color: #112240;
+  --secondary-color: #ccd6f6;
+  --tertiary-color: #ffb400; /* Warmer gold for better contrast */
+
+  --background-text-color: #0a192f;
+  --primary-text-color: #e6f1ff;
+  --secondary-text-color: #a8b2d1; /* Improved readability */
+
+  --primary-font: "Fira Code", monospace;
+
+  --primary-font-size: 1.3em;
+  --secondary-font-size: 1em;
+
+  --lite-font-weight: 200; /* Adjusted for better visibility */
+  --normal-font-weight: 400;
+  --heavy-font-weight: 700;
+
+  --primary-line-height: 1.6; /* Improved text readability */
+  --secondary-line-height: 1.3;
+
+  --primary-letter-spacing: 0.1em;
+  --secondary-letter-spacing: 0.15em;
 }
-main,
+
 body {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 20px;
+  font-family: var(--primary-font);
+  font-size: var(--primary-font-size);
+  font-weight: var(--normal-font-weight);
+  line-height: var(--primary-line-height);
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--primary-text-color);
   background-color: var(--background-color);
-  color: var(--text-color);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  color: var(--heading-color);
+h6,
+p,
+li,
+button {
+  font-weight: var(--normal-font-weight);
+  line-height: var(--secondary-line-height);
+  letter-spacing: var(--secondary-letter-spacing);
+  color: var(--secondary-text-color);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
-h1 {
-  font-size: 4rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.75rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
-h5 {
-  font-size: 1.25rem;
-}
-h6 {
-  font-size: 1rem;
-}
-a,
-p {
-  font-size: 2rem;
-}
+
 a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--link-hover-color);
+  color: var(--tertiary-color);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+html {
+  scroll-behavior: smooth;
+}
 
-  text-align: center;
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--tertiary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
 }

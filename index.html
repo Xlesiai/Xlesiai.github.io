@@ -1,76 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Michael's Portfolio</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css\style.css" />
-    <link rel="stylesheet" href="css\intro.css" />
-    <link rel="stylesheet" href="css\projects.css" />
-    
-    <!-- JS -->
-    <script src="js\projects.js" defer></script>
-    <script src="js\section.js" defer></script>
-    <script src="js\typing.js" defer></script>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Cardoso</title>
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Scripts -->
+    <script src="js/projects.js" defer></script>
+    <script src="js/about.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
-    <div class="container">
-      <!-- Intro -->
-      <!-- 
-            - Who I Am
-            - Resume
-        -->
-      <section class="intro">
-        <h1 class="typing">Michael Cardoso</h1>
-        <p class="typing">A passionate software developer.</p>
-        <p class="typing">Proven ability to develop solutions in both academic and project-based environments. Seeking opportunities to apply my technical skills and collaborative approach to real-world challenges in software development.
-        </p>
-      </section>
-      <!-- About Me -->
-      <!-- 
-            - About Me
-            - Work Experience
-            - My Skills
-        -->
-      <section class="about-me">
-        <h2>About Me</h2>
-        <p>Hello, I'm Michael.</p>
-        <p>
-            I am a recent Prairie View A&M University graduate, 
-            motivated to show my skills and abilities with a strong 
-            background in Python, machine learning, and 
-            cybersecurity research.
-        </p>
-      </section>
-      <!-- Projects -->
-      <!--
-            - CS Projects
-            - Game Dev Projects
-        -->
-      <section class="projects">
-        <h2>Projects</h2>
-        <div id="projects-container"></div>
-      </section>
-      <!-- Contacts/Links -->
-      <!--
-            - Email
-            - LinkedIn
-            - GitHub
-            - Youtube
-        -->
-      <section class="contacts">
-        <h2>Contacts</h2>
+    <button class="theme-toggle" onclick="toggleTheme(this)">🌙</button>
+
+    <!-- About -->
+    <section id="about">
+      <h1 class="type">Michael Cardoso</h1>
+      <ul>
+        <li class="type 60">Full-Stack Developer</li>
+        <li class="type 60">Indie Game Developer</li>
+        <li class="type 60">AI Developer</li>
+      </ul>
+      <p class="type 45">
+        Hi, I’m Michael Cardoso, a summa cum laude graduate from Prairie View A
+        and M University with a bachelor's degree in Computer Science. I am
+        passionate about game development, artificial intelligence, and
+        full-stack development.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Programming</h3>
+          <ul>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Kotlin</li>
+            <li>HTML, CSS, JavaScript</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul>
+            <li>Git</li>
+            <li>Unreal</li>
+            <li>Unity</li>
+            <li>Godot</li>
+            <li>Android Studio</li>
+            <li>Visual Studio Code</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Problem Solving</li>
+            <li>Teamwork</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 id="projects_title">Projects</h2>
+      <header>
         <ul>
-          <li><a href="mailto:mikecar26@gmail.com">Email</a></li>
-          <li><a href="https://www.linkedin.com/in/michael-cardoso/">LinkedIn</a></li>
-          <li><a href="https://github.com/xlesiai">GitHub</a></li>
-          <li><a href="https://www.youtube.com/@mcardoso">YouTube</a></li>
-      </section>
-    </div>
-    <!-- Footer -->
+          <li><button onclick="onClick(this)">Full-Stack</button></li>
+          <li><button onclick="onClick(this)">Game Dev</button></li>
+          <li>
+            <button onclick="onClick(this)">Artificial Intelligence</button>
+          </li>
+        </ul>
+      </header>
+      <ul id="projectList"></ul>
+    </section>
+
+    <!-- Information -->
+    <section id="information">
+      <h2>Information</h2>
+      <p>
+        If you have any questions or would like to work together, please feel
+        free to contact me. My preferred method of communication is email or
+        text.
+      </p>
+      <div>
+        <ul id="contact">
+          <h3>Contacts</h3>
+          <li>
+            Email: <a href="mailto:mikecar26@gmail.com">mikecar26@gmail.com</a>
+          </li>
+          <li>Phone: (346) 588-0518</li>
+        </ul>
+        <ul id="links">
+          <h3>Links</h3>
+          <li>GitHub: <a href="https://github.com/Xlesiai">Xlesiai</a></li>
+          <li>Resume: <a href="res/Michael Cardoso.docx">Download</a></li>
+          <li>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/cardoso-michael/"
+              >cardoso-michael</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
     <footer>
-      <p>Michael's Portfolio</p>
+      <p>&copy; 2025 Michael Cardoso. All rights reserved.</p>
     </footer>
   </body>
 </html>

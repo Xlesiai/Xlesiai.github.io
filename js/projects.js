@@ -1,28 +1,82 @@
-// Function to create a project element
-function createProject(title, imageUrl) {
-  // Create the div element for the project
-  const projectDiv = document.createElement("div");
-  projectDiv.classList.add("project");
-
-  // Create the image element
-  const img = document.createElement("img");
-  img.src = imageUrl;
-  img.alt = title;
-
-  // Create the title element
-  const titleElement = document.createElement("div");
-  titleElement.classList.add("project-title");
-  titleElement.textContent = title;
-
-  // Append image and title to the project div
-  projectDiv.appendChild(img);
-  projectDiv.appendChild(titleElement);
-
-  // Append the project div to the container
-  document.getElementById("projects-container").appendChild(projectDiv);
+// When project button is clicked, toggle 'clicked' class
+function onClick(button) {
+  projectList.innerHTML = "";
+  button.classList.toggle("clicked");
+  clickedButton = document.getElementsByClassName("clicked");
+  for (var i = 0; i < clickedButton.length; i++) {
+    populateProjects(clickedButton[i].innerHTML);
+  }
 }
 
-// Example of adding multiple projects
-createProject("Project 1", "https://via.placeholder.com/100");
-createProject("Project 2", "https://via.placeholder.com/100");
-createProject("Project 3", "https://via.placeholder.com/100");
+function toggleTheme(button) {
+  document.body.classList.toggle("dark-mode");
+  button.classList.toggle("clicked_theme");
+  if (button.classList.contains("clicked_theme")) {
+    button.innerHTML = "🌞";
+  } else {
+    button.innerHTML = "🌙";
+  }
+}
+
+// Function to populate projects and loop them
+function populateProjects(category) {
+  const fragment = document.createDocumentFragment();
+
+  for (const key in projects[category]) {
+    const item = document.createElement("li");
+    item.innerHTML = `<a href="${projects[category][key]["link"]}" target="_blank">
+                        <img src="${projects[category][key]["img"]}" alt="${key}">
+                      </a>`;
+    fragment.appendChild(item);
+  }
+  projectList.appendChild(fragment);
+}
+
+// Projects
+projects = {
+  "Full-Stack": {
+    "Project 1": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+    "Project 2": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+    "Project 3": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+  },
+  "Game Dev": {
+    "Project 1": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+    "Project 2": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+    "Project 3": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+  },
+  "Artificial Intelligence": {
+    "Project 1": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+    "Project 2": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+    "Project 3": {
+      img: "https://placehold.co/150",
+      link: "www.google.com",
+    },
+  },
+};
+
+const projectList = document.getElementById("projectList");
+const title = document.getElementById("projects_title");
