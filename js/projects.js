@@ -8,16 +8,6 @@ function onClick(button) {
   }
 }
 
-function toggleTheme(button) {
-  document.body.classList.toggle("dark-mode");
-  button.classList.toggle("clicked_theme");
-  if (button.classList.contains("clicked_theme")) {
-    button.innerHTML = "🌞";
-  } else {
-    button.innerHTML = "🌙";
-  }
-}
-
 // Function to populate projects and loop them
 function populateProjects(category) {
   const fragment = document.createDocumentFragment();
@@ -32,47 +22,34 @@ function populateProjects(category) {
   projectList.appendChild(fragment);
 }
 
+const imgSize = 150;
 // Projects
 projects = {
   "Full-Stack": {
-    "Project 1": {
-      img: "https://placehold.co/150",
+    WannaCry: {
+      img: "https://placehold.co/" + imgSize,
       link: "www.google.com",
     },
-    "Project 2": {
-      img: "https://placehold.co/150",
+    "Outfit of the Day": {
+      img: "https://placehold.co/" + imgSize,
       link: "www.google.com",
     },
     "Project 3": {
-      img: "https://placehold.co/150",
+      img: "https://placehold.co/" + imgSize,
       link: "www.google.com",
     },
   },
   "Game Dev": {
-    "Project 1": {
-      img: "https://placehold.co/150",
+    "The Heart of the Museum": {
+      img: "https://placehold.co/" + imgSize,
       link: "www.google.com",
     },
     "Project 2": {
-      img: "https://placehold.co/150",
+      img: "https://placehold.co/" + imgSize,
       link: "www.google.com",
     },
     "Project 3": {
-      img: "https://placehold.co/150",
-      link: "www.google.com",
-    },
-  },
-  "Artificial Intelligence": {
-    "Project 1": {
-      img: "https://placehold.co/150",
-      link: "www.google.com",
-    },
-    "Project 2": {
-      img: "https://placehold.co/150",
-      link: "www.google.com",
-    },
-    "Project 3": {
-      img: "https://placehold.co/150",
+      img: "https://placehold.co/" + imgSize,
       link: "www.google.com",
     },
   },

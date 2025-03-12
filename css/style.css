@@ -90,3 +90,27 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background: var(--tertiary-color);
+  color: var(--primary-text-color);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --background-color: #ecf0f1;
+  --primary-color: #ffffff;
+  --tertiary-color: #ff6464;
+
+  --primary-text-color: #02151a;
+  --secondary-text-color: #2c3e50;
+
+  --background-text-color: #ecf0f1;
+}
