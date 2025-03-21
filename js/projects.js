@@ -41,8 +41,8 @@ projects = {
   },
   "Game Dev": {
     "The Heart of the Museum": {
-      img: "https://placehold.co/" + imgSize,
-      link: "www.google.com",
+      img: "https://img.itch.zone/aW1nLzExNDM4MTk0LnBuZw==/original/xtj0H5.png",
+      link: "Game-Dev/The-Heart-of-the-Museum.html",
     },
     "Project 2": {
       img: "https://placehold.co/" + imgSize,
@@ -57,3 +57,10 @@ projects = {
 
 const projectList = document.getElementById("projectList");
 const title = document.getElementById("projects_title");
+
+setTimeout(() => {
+  const clickedButtons = document.getElementsByClassName("project-button");
+  for (var i = 0; i <= clickedButtons.length; i++) {
+    onClick(clickedButtons[i]);
+  }
+}, 1000);
