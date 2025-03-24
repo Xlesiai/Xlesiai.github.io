@@ -16,12 +16,12 @@ section.title img {
   height: 10em;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.3s ease-in-out;
 }
-
+section.title img:hover {
+  transform: scale(1.1);
+}
 /* About */
-section#about {
-  height: 15em;
-}
 
 /*  Skills */
 section#skills {
