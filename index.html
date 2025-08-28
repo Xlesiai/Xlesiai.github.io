@@ -3,135 +3,306 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Cardoso</title>
+    <title>Michael Cardoso - Portfolio</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/main.css" />
-
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
     <!-- Scripts -->
-    <script src="js/projects.js" defer></script>
-    <script src="js/about.js" defer></script>
-    <script src="js/theme.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <!-- <script src="js/about.js" defer></script> -->
+    <!-- <script src="js/theme.js" defer></script> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-    <button class="theme-toggle" onclick="toggleTheme(this)">🌙</button>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span>MC</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#information">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme(this)">🌙</button>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-    <!-- About -->
-    <section id="about">
-      <h1 class="type">Michael Cardoso</h1>
-      <ul>
-        <li class="type 60">Full-Stack Developer</li>
-        <li class="type 60">Indie Game Developer</li>
-        <li class="type 60">AI Developer</li>
-      </ul>
-      <p class="type 45">
-        Hi, I’m Michael Cardoso, a summa cum laude graduate from Prairie View A
-        and M University with a bachelor's degree in Computer Science. I am
-        passionate about game development, artificial intelligence, and
-        full-stack development.
-      </p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="type">Michael Cardoso</h1>
+          <div class="hero-tags">
+            <span class="tag type 60">Software Developer</span>
+            <span class="tag type 60">Indie Game Developer</span>
+            <span class="tag type 60">Android Developer</span>
+            <span class="tag type 60">AI Developer</span>
+          </div>
+          <p class="type 45">
+            Hi, I'm Michael Cardoso, a summa cum laude graduate from Prairie
+            View A & M University with a bachelor's degree in Computer Science.
+            I am passionate about game development, artificial intelligence, and
+            full-stack development.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#information" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img class="image-placeholder" src="https://media.licdn.com/dms/image/v2/D5603AQGeRojkpcUomQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721105707955?e=1759363200&v=beta&t=lEu0z-vv0wnnfRXplL89mkEh4iR8qsKgfvEQGhYYce4" alt="Michael Cardoso" />
+          <!-- <div class="image-placeholder"> -->
+            <!-- <i class="fas fa-user"></i> -->
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll down</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
     <!-- Skills -->
     <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div>
-          <h3>Programming</h3>
-          <ul>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Kotlin</li>
-            <li>HTML, CSS, JavaScript</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Tools</h3>
-          <ul>
-            <li>Git</li>
-            <li>Unreal</li>
-            <li>Unity</li>
-            <li>Godot</li>
-            <li>Android Studio</li>
-            <li>Visual Studio Code</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Problem Solving</li>
-            <li>Teamwork</li>
-            <li>Leadership</li>
-          </ul>
+      <div class="container">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-header">
+              <i class="fas fa-code"></i>
+              <h3>Programming</h3>
+            </div>
+            <ul>
+              <li>
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Kotlin</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="65%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">C++</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="60%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">HTML, CSS, JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <div class="skill-header">
+              <i class="fas fa-tools"></i>
+              <h3>Tools</h3>
+            </div>
+            <ul>
+              <li>
+                <span class="skill-name">Git</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Unreal</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Unity</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="65%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Godot</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="40%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Android Studio</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </li>
+              <li>
+                <span class="skill-name">Visual Studio Code</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <div class="skill-header">
+              <i class="fas fa-people-arrows"></i>
+              <h3>Soft Skills</h3>
+            </div>
+            <ul class="soft-skills">
+              <li>
+                <div class="soft-skill-item">
+                  <i class="fas fa-puzzle-piece"></i>
+                  <span>Problem Solving</span>
+                </div>
+              </li>
+              <li>
+                <div class="soft-skill-item">
+                  <i class="fas fa-users"></i>
+                  <span>Teamwork</span>
+                </div>
+              </li>
+              <li>
+                <div class="soft-skill-item">
+                  <i class="fas fa-flag"></i>
+                  <span>Leadership</span>
+                </div>
+              </li>
+              <li>
+                <div class="soft-skill-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Time Management</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-      <h2 id="projects_title">Projects</h2>
-      <header>
-        <ul>
-          <li>
-            <button class="project-button" onclick="onClick(this)">
-              Full-Stack
-            </button>
-          </li>
-          <li>
-            <button class="project-button" onclick="onClick(this)">
-              Game Dev
-            </button>
-          </li>
-        </ul>
-      </header>
-      <ul id="projectList"></ul>
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="software">
+            Software
+          </button>
+          <button class="filter-btn" data-filter="game-dev">Game Dev</button>
+          <button class="filter-btn" data-filter="android">Android</button>
+          <button class="filter-btn" data-filter="paper">Papers</button>
+        </div>
+        <div class="projects-grid" id="projectList">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </div>
     </section>
 
     <!-- Information -->
     <section id="information">
-      <h2>Information</h2>
-      <p>
-        If you have any questions or would like to work together, please feel
-        free to contact me. My preferred method of communication is email or
-        text.
-      </p>
-      <div>
-        <ul id="contact">
-          <h3>Contacts</h3>
-          <li>
-            Email: <a href="mailto:mikecar26@gmail.com">mikecar26@gmail.com</a>
-          </li>
-          <li>Phone: (346) 588-0518</li>
-        </ul>
-        <ul id="links">
-          <h3>Links</h3>
-          <li>
-            GitHub:
-            <a href="https://github.com/Xlesiai" target="_blank">Xlesiai</a>
-          </li>
-          <li>Resume: <a href="res/Michael Cardoso.docx">Download</a></li>
-          <li>
-            LinkedIn:
-            <a
-              href="https://www.linkedin.com/in/cardoso-michael/"
-              target="_blank"
-              >cardoso-michael</a
-            >
-          </li>
-        </ul>
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <p>
+          If you have any questions or would like to work together, please feel
+          free to contact me. My preferred method of communication is email or
+          text.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <a href="mailto:mikecar26@gmail.com">mikecar26@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span>Phone</span>
+                <a href="tel:3465880518">(346) 588-0518</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span>Location</span>
+                <span>Texas, USA</span>
+              </div>
+            </div>
+          </div>
+          <div class="links-info">
+            <h3>Links & Resources</h3>
+            <div class="links-grid">
+              <a
+                href="https://github.com/Xlesiai"
+                target="_blank"
+                class="link-item"
+              >
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="res/Michael Cardoso.docx" class="link-item">
+                <i class="fas fa-file-download"></i>
+                <span>Resume</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cardoso-michael/"
+                target="_blank"
+                class="link-item"
+              >
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://xlesiai.itch.io/"
+                target="_blank"
+                class="link-item"
+              >
+                <i class="fab fa-itch-io"></i>
+                <span>Itch.io</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
     <footer>
-      <p>&copy; 2025 Michael Cardoso. All rights reserved.</p>
+      <div class="container">
+        <p>&copy; 2025 Michael Cardoso. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#information">Contact</a>
+        </div>
+      </div>
     </footer>
+
+    <script></script>
   </body>
 </html>
