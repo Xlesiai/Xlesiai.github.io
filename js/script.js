@@ -59,7 +59,7 @@ const projects = {
     },
     "Nexa Book Recommender": {
       img: "https://placehold.co/400x300/112240/ffffff?text=Nexa+Book+Recommender",
-      link: "https://github.com/AND101-Group30/Nexa-Book-Recommender",
+      link: "https://www.youtube.com/watch?v=CbuKpy9PBeg",
       category: ["android"],
       description:
         "A project I made while in CodePath's Android App Development Bootcamp",
