@@ -1,178 +1,185 @@
-// Enhanced projects data structure
-const projects = {
-  all: {
-    "WannaCry Analysis": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=WannaCry+Analysis",
-      link: "https://ieeexplore.ieee.org/document/10849243",
-      category: ["paper", "software", "Python"],
-      description:
-        "Cybersecurity research analyzing the WannaCry ransomware with the use of AI",
-    },
-    "Outfit of the Day": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=Outfit+of+the+Day",
-      link: "https://github.com/orgs/Outfit-of-the-Day",
-      category: ["software", "android"],
-      description:
-        "My senior project: an IOS app for clothing classification and recommendation, unfortunately it was lost due to most of the ios code being in a school computer",
-    },
-    "Android Ignition": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=Android+Ignition",
-      link: "https://github.com/Xlesiai/Android-Ignition",
-      category: ["software", "android"],
-      description: "Using SCADA Ignition and Android to monitor device sensors",
-    },
-    "AI Blindbox Helper": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=AI+Blindbox+Helper",
-      link: "https://github.com/Xlesiai/Blindbox-Helper",
-      category: ["software", "Python"],
-      description: "Using AI to help players in finding Blindboxs",
-    },
-    "The Heart of the Museum": {
-      img: "https://img.itch.zone/aW1nLzExNDM4MTk0LnBuZw==/original/xtj0H5.png",
-      link: "https://xlesiai.itch.io/the-heart-of-the-museum",
-      category: ["game-dev", "Unity"],
-      description: "A puzzle adventure game set in a mysterious museum",
-    },
-    "Ghost Chess": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=Ghost Chess",
-      link: "https://github.com/Xlesiai/Ghost-Chess",
-      category: ["game-dev", "Unity"],
-      description: "My first game made in Unity, its just a chess game",
-    },
-    "Battle of the Arcane": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=BOTA",
-      link: "#",
-      category: ["game-dev", "Unreal"],
-      description: "My FPS wizard battle game that im still working on",
-    },
-    "Twisted Insanity": {
-      img: "https://img.itch.zone/aW1nLzE1MjgxNzg0LnBuZw==/347x500/OEdgA8.png",
-      link: "https://xlesiai.itch.io/twisted-insanity",
-      category: ["game-dev", "Unreal"],
-      description: "Psychological horror game with puzzle elements",
-    },
-    "Where's My Stuff": {
-      img: "https://img.itch.zone/aW1nLzE5Nzg2MjMyLnBuZw==/347x500/QMB1d6.png",
-      link: "https://xlesiai.itch.io/wheres-our-stuff",
-      category: ["game-dev", "Unreal"],
-      description: "Organizational app with gamification elements",
-    },
-    "Nexa Book Recommender": {
-      img: "https://placehold.co/400x300/112240/ffffff?text=Nexa+Book+Recommender",
-      link: "https://www.youtube.com/watch?v=CbuKpy9PBeg",
-      category: ["android"],
-      description:
-        "A project I made while in CodePath's Android App Development Bootcamp",
-    },
+const projects = [
+  {
+    title: "Dynamic Analysis of WannaCry",
+    type: "Cybersecurity research",
+    description:
+      "Co-authored peer-reviewed IEEE research. Automated Cuckoo VM analysis, combined host logs with NetFlow features, and evaluated ensemble models with up to 99% detection accuracy.",
+    tags: ["Python", "Cuckoo Sandbox", "NetFlow", "Machine Learning"],
+    filter: "research",
+    art: "research",
+    label: "Research / Cybersecurity",
+    visual: "WANNACRY\nANALYSIS",
+    detail: "Host telemetry + network flows",
+    url: "https://ieeexplore.ieee.org/document/10849243",
+    action: "Read publication",
   },
-};
+  {
+    title: "Android-Ignition Sensor Gateway",
+    type: "Industrial IoT / telemetry",
+    description:
+      "Streams Android sensor readings through MQTT into Ignition SCADA for live monitoring and historical storage in MariaDB.",
+    tags: ["Kotlin", "MQTT", "Ignition SCADA", "MariaDB"],
+    filter: "systems",
+    art: "systems",
+    label: "Systems / Industrial IoT",
+    visual: "SENSOR\nGATEWAY",
+    detail: "Android  /  MQTT  /  SCADA",
+    url: "https://github.com/Xlesiai/Android-Ignition",
+    action: "View on GitHub",
+  },
+  {
+    title: "AI-Assisted Social Data Parser",
+    type: "Data extraction / personal project",
+    description:
+      "An ongoing Python tool for Xiaohongshu blind-box posts: translate and normalize text, extract useful product clues, and shape results into validated JSON.",
+    tags: ["Python", "Ollama / Mistral", "Pydantic", "Translation"],
+    filter: "data",
+    art: "data",
+    label: "Data / AI-assisted extraction",
+    visual: "RAW TEXT\nTO SIGNAL",
+    detail: "Parse  /  normalize  /  structure",
+    url: "https://github.com/Xlesiai/Blindbox-Helper",
+    action: "View on GitHub",
+  },
+  {
+    title: "Nexa Book Recommender",
+    type: "Android / mobile",
+    description:
+      "A Kotlin Android app that fetches and caches book metadata from Open Library, then combines API results with a user's local library for recommendations.",
+    tags: ["Kotlin", "Android", "REST API", "Open Library"],
+    filter: "mobile",
+    art: "mobile",
+    label: "Mobile / recommendations",
+    visual: "BOOKS\nIN CONTEXT",
+    detail: "Open Library + personal library",
+    url: "https://github.com/AND101-Group30/Nexa-Book-Recommender",
+    action: "View on GitHub",
+  },
+];
 
-// Initialize the page
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize projects
-  populateProjects("all");
+function createTextElement(tagName, className, text) {
+  const element = document.createElement(tagName);
+  element.className = className;
+  element.textContent = text;
+  return element;
+}
 
-  // Initialize filter buttons
-  const filterButtons = document.querySelectorAll(".filter-btn");
+function createProjectCard(project, index) {
+  const card = document.createElement("article");
+  card.className = "project-card";
+  card.dataset.category = project.filter;
+
+  const artwork = document.createElement("div");
+  artwork.className = `project-art project-art--${project.art}`;
+
+  const artTop = document.createElement("div");
+  artTop.className = "art-top";
+  artTop.append(
+    createTextElement("span", "art-label", project.label),
+    createTextElement("span", "art-index", String(index + 1).padStart(2, "0")),
+  );
+
+  const artTitle = createTextElement("strong", "art-title", project.visual);
+  const artBottom = document.createElement("div");
+  artBottom.className = "art-bottom";
+  artBottom.append(createTextElement("span", "", project.detail));
+  artwork.append(artTop, artTitle, artBottom);
+
+  const content = document.createElement("div");
+  content.className = "project-content";
+  content.append(
+    createTextElement("p", "project-type", project.type),
+    createTextElement("h3", "", project.title),
+    createTextElement("p", "", project.description),
+  );
+
+  const tags = document.createElement("div");
+  tags.className = "project-tags";
+  tags.setAttribute("aria-label", "Technologies");
+  project.tags.forEach((tag) => tags.append(createTextElement("span", "project-tag", tag)));
+
+  const link = createTextElement("a", "project-link", "");
+  link.href = project.url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.setAttribute("aria-label", `${project.action}: ${project.title}`);
+  link.append(document.createTextNode(project.action + " "));
+  link.append(createTextElement("span", "", "↗"));
+  link.lastElementChild.setAttribute("aria-hidden", "true");
+
+  content.append(tags, link);
+  card.append(artwork, content);
+  return card;
+}
+
+function initializeProjects() {
+  const projectGrid = document.getElementById("projectList");
+  const filterButtons = document.querySelectorAll(".filter-button");
+
+  projects.forEach((project, index) => {
+    projectGrid.append(createProjectCard(project, index));
+  });
+
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-      populateProjects(button.dataset.filter);
+      const filter = button.dataset.filter;
+      filterButtons.forEach((item) => {
+        const isActive = item === button;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+
+      projectGrid.querySelectorAll(".project-card").forEach((card) => {
+        card.hidden = filter !== "all" && card.dataset.category !== filter;
+      });
     });
   });
+}
 
-  // Initialize skill bars animation
-  initSkillBars();
+function initializeNavigation() {
+  const header = document.getElementById("siteHeader");
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
 
-  // Initialize navigation
-  initNavigation();
+  const closeMenu = () => {
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation menu");
+    links.classList.remove("is-open");
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    links.classList.toggle("is-open", isOpen);
+  });
+
+  links.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 24);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
+
+function initializeTheme() {
+  const toggle = document.getElementById("themeToggle");
+  const icon = toggle.querySelector(".theme-icon");
+
+  toggle.addEventListener("click", () => {
+    const lightTheme = document.documentElement.dataset.theme !== "light";
+    document.documentElement.dataset.theme = lightTheme ? "light" : "dark";
+    toggle.setAttribute("aria-pressed", String(lightTheme));
+    toggle.setAttribute("aria-label", lightTheme ? "Switch to dark theme" : "Switch to light theme");
+    icon.textContent = lightTheme ? "☾" : "☼";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initializeProjects();
+  initializeNavigation();
+  initializeTheme();
+  document.getElementById("currentYear").textContent = String(new Date().getFullYear());
 });
-
-// Enhanced project population function
-function populateProjects(category) {
-  const projectGrid = document.getElementById("projectList");
-  projectGrid.innerHTML = "";
-
-  const fragment = document.createDocumentFragment();
-
-  for (const key in projects.all) {
-    const project = projects.all[key];
-
-    if (category === "all" || project.category.includes(category)) {
-      const projectCard = document.createElement("div");
-      projectCard.className = "project-card";
-      projectCard.innerHTML = `
-              <div class="project-image">
-                <img src="${project.img}" alt="${key}">
-                <div class="project-overlay">
-                  <div class="project-actions">
-                    <a href="${
-                      project.link
-                    }" class="project-link">View Project</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>${key}</h3>
-                <p>${project.description}</p>
-                ${project.category.map(filterCards).join("")}
-              </div>
-            `;
-      fragment.appendChild(projectCard);
-    }
-  }
-
-  projectGrid.appendChild(fragment);
-}
-
-// Initialize skill bars animation
-function initSkillBars() {
-  const skillBars = document.querySelectorAll(".skill-progress");
-  skillBars.forEach((bar) => {
-    const width = bar.getAttribute("data-width");
-    bar.style.width = width;
-  });
-}
-
-// Initialize navigation
-function initNavigation() {
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    navToggle.classList.toggle("active");
-  });
-
-  // Close mobile menu when clicking on a link
-  document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      navToggle.classList.remove("active");
-    });
-  });
-
-  // Navbar scroll effect
-  window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-}
-
-function filterCards(elm) {
-  return `<span class="project-category">${elm}</span>`;
-}
-function toggleTheme(button) {
-  document.body.classList.toggle("dark-mode");
-  button.classList.toggle("clicked_theme");
-  if (button.classList.contains("clicked_theme")) {
-    button.innerHTML = "☀️";
-  } else {
-    button.innerHTML = "🌙";
-  }
-}
